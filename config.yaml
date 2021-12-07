@@ -1,0 +1,12 @@
+---
+- hosts: ubuntu
+  roles:
+    - pythonrole
+    - java
+    - role: change_motd
+      vars:
+        motd: "Ansible Managed by Casile"
+    - role: create_user
+      vars:
+        username: "qabcasile"
+        name: "Abegail Casile"
